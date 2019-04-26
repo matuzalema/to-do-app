@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --env production",
     "start": "webpack --env development",
-    "start-server": "webpack-dev-server --env development"
+    "start-server": "webpack-dev-server --env development",
+    "go": "npm run start && npm run start-server"
   },
   "keywords": [],
   "author": "",
