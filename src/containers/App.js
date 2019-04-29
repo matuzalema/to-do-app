@@ -28,30 +28,28 @@ class App extends Component {
     }
 
 
-    // addTodo(val){
-    //     const todo = {
-    //         text: val,
-    //         id: uuid.v4(),
-    //     };
-    //     const tasks = [...this.state.tasks, todo];
-    //     this.setState({tasks});
-    // }
-    removeTodo(id) {
-        alert('usuniete' + id);
+    addTodo(val){
+        const todo = {
+            text: val,
+            id: uuid.v4(),
+        };
+        const tasks = [...this.state.tasks, todo];
+        this.setState({tasks});
     }
-    // removeToDo(id) {
-    // 	const remainder = this.state.tasks.filter(todo => todo.id
-    // 		!==id);
-    // 	this.setState({tasks: remainder});
-    // }
+
+    removeTodo(id) {
+        const remainder = this.state.tasks.filter(todo => todo.id !== id);
+        this.setState({tasks: remainder});
+    }
+
     render() {
         return (
             <div className={style.TodoApp}>
                 <h1 className="title">
                 <Title numberOfTasks={this.state.numberOfTasks}/>
                 </h1>
-                <TodoForm/>
-                <TodoList tasks={this.state.tasks} removeTodo={this.removeTodo}/>
+                <TodoForm addTodo = {this.addTodo.bind(this)}/>
+                <TodoList tasks={this.state.tasks} removeTodo={this.removeTodo.bind(this)}/>
             </div>
         );
     }
