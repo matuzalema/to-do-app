@@ -15,18 +15,15 @@ class App extends Component {
             tasks: [
                 { 
                     id: 0,
-                    text: 'zrobic zakupy',
-                    active: true,
+                    text: 'wash the car',
                 },
                 { 
                     id: 1,
-                    text: 'umyc okna',
-                    active: true
+                    text: 'do shopping',
                 }
             ]
         };
     }
-
 
     addTodo(val){
         const todo = {
@@ -45,10 +42,9 @@ class App extends Component {
     render() {
         return (
             <div className={style.TodoApp}>
-                <h1 className="title">
-                <Title numberOfTasks={this.state.numberOfTasks}/>
-                </h1>
-                <TodoForm addTodo = {this.addTodo.bind(this)}/>
+                <Title/>
+                <TodoForm addTodo={this.addTodo.bind(this)}/>
+                <h3>You have {this.state.tasks.length} tasks to do</h3>
                 <TodoList tasks={this.state.tasks} removeTodo={this.removeTodo.bind(this)}/>
             </div>
         );

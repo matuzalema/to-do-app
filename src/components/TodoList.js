@@ -5,10 +5,7 @@ const TodoList = (props) => {
 		const tasks = props.tasks.map(task => <Todo key={task.id} task={task} removeTodo={props.removeTodo} />);
 	return (
 		<div>
-			<h1> Zadania do zrobienia</h1>
 			<ul>{tasks}</ul>
-			<h2> Zadania zrobione</h2>
-
 		</div>
 	);
 };
