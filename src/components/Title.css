@@ -1,3 +1,6 @@
 .header {
-	font-size: 46px;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 900;
+	margin: 0;
 }

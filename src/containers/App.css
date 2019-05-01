@@ -4,13 +4,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
+    padding-top: 50px;
+    /*justify-content: center;*/
     align-items: center;
     align-content: center;
     /*margin-top: 100px;*/
     width: 50vw;
-    padding: 0px;
+    /*padding: 0px;*/
 
-    height: 90vh;
+    min-height: 90vh;
     margin: 40px auto;
+    border-radius: 10px;
 }

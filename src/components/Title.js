@@ -8,10 +8,10 @@ class Title extends Component {
 
 	render(){
 		return(
-		<div>
+		<>
 			<h1 className={style.header}>Todo app</h1>
 			<h2>react + webpack</h2>
-		</div>
+		</>
 		)
 	}
 }

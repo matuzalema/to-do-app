@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import style from './TodoForm.css';
 
 class TodoForm extends Component {
 	constructor(props){
@@ -11,10 +12,11 @@ class TodoForm extends Component {
 
     handleClick(e) {
     	e.preventDefault();
-    	this.props.addTodo(this.state.value);
-    	this.setState({value: ''});
     	if(this.state.value.length < 2 ) {
     		alert("It't to short");
+    	} else {
+	    	this.props.addTodo(this.state.value);
+	    	this.setState({value: ''}); 		
     	}
     }
 
@@ -24,15 +26,16 @@ class TodoForm extends Component {
    
 	render(){
 		return(
-		<form onSubmit={this.handleClick}>
-			<label> Add a task</label>
+		<form onSubmit={this.handleClick} className={style.form}>
+			<label className={style.label}> Add a task</label>
 			<input 
+				className={style.input}
 				type='text' 
 				placeholder="Enter your task"
 				value = {this.state.value}
 				onChange = {this.handleChange}
 			/>
-			<button  type="submit">Submit</button>
+			<button  type="submit" className={style.submit}>save</button>
 		</form>
 		)
 	}

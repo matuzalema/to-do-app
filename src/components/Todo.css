@@ -1,0 +1,15 @@
+.btnRemove {
+	background-color: #54a0ff;
+	border: none;
+	width: 20px;
+	height: 20px;
+}
+
+.btnRemove:focus {
+	outline: none;
+}
+
+.task {
+	display: inline-block;
+	margin-right: 10px;
+}

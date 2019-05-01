@@ -1,0 +1,35 @@
+.form {
+	margin-top: 20px;
+}
+
+.label {
+	margin-right: 10px;
+}
+
+.input {
+	height: 30px;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+.input:focus {
+	outline: none;
+}
+
+.submit {
+	height: 30px;
+	min-width: 80px;
+	background-color: #feca57;
+	border: none;
+	border-radius: 5px;
+	font-weight: 500;
+	color: #222f3e;
+}
+
+.submit:focus {
+	outline:0;
+}
+
+.submit:hover {
+	background-color: #ff9f43;
+}
